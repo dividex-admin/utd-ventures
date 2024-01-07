@@ -40,7 +40,7 @@ const InvestmentForm = () => {
   };
 
   const nextStep = () => {
-    flag=true;
+    let flag=true;
     if(currentStep==1){
       flag= validateInput();
     }
