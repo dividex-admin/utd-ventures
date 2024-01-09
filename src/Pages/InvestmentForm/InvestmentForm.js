@@ -114,6 +114,36 @@ const InvestmentForm = () => {
 
 
     }
+
+    else if(step==3){
+      if(!formFields["projectDuration"]){
+        formIsValid = false;
+        formErrors["projectDuration"] = "Cannot be empty";
+        document.getElementById("projectDuration").classList.add("border-red-700");
+        document.getElementById("projectDurationError").classList.remove("hidden");
+  
+      }
+      else{
+        formIsValid = formIsValid && true;
+        document.getElementById("projectDuration").classList.remove("border-red-700");
+        document.getElementById("projectDurationError").classList.add("hidden");
+      }
+
+      if(!formFields["yourInvestment"]){
+        formIsValid = false;
+        formErrors["yourInvestment"] = "Cannot be empty";
+        document.getElementById("yourInvestment").classList.add("border-red-700");
+        document.getElementById("yourInvestmentError").classList.remove("hidden");
+  
+      }
+      else{
+        formIsValid = formIsValid && true;
+        document.getElementById("yourInvestment").classList.remove("border-red-700");
+        document.getElementById("yourInvestmentError").classList.add("hidden");
+      }
+      
+      
+    }
     
     return formIsValid;
    };
@@ -124,6 +154,19 @@ const InvestmentForm = () => {
 //     console.log('Form submitted:', formData);
 
 //   };
+
+
+const finalSubmit = (e) => {
+  e.preventDefault();
+  let flag=true;
+  flag= validateInput(currentStep);
+  
+  if(flag){
+   handleSubmit(e);
+  }
+  else{
+  }
+};
 
   const handleSubmit = async (e) => {
         // Perform form submission logic here
@@ -143,12 +186,10 @@ const InvestmentForm = () => {
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       } else {
-        
+        // navigate('/thank-you');
+                // history.push('/thank-you'); 
+                window.location.replace('/thank-you');
       }
-      // Handle the response data here
-      // navigate('/thank-you');
-      // history.push('/thank-you'); 
-      window.location.replace('/thank-you');
 
     } catch (error) {
       // Handle errors here
@@ -187,7 +228,7 @@ const InvestmentForm = () => {
         
       </div>
 
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={finalSubmit}>
         {currentStep === 1 && (
           <div>
             <div className="flex space-x-4">
@@ -474,9 +515,7 @@ const InvestmentForm = () => {
               />
             </div>
 
-            <div className="my-6 border border-solid rounded-[5]">
-              <div id="projectDuration">
-
+            <div id="projectDuration" className="my-4 border border-solid rounded-[5]">
               <label className="px-2 block">Timeline for project completion/project duration :</label>
               <input
                 type="text"
@@ -485,12 +524,11 @@ const InvestmentForm = () => {
                 value={formData.projectDuration}
                 onChange={handleChange}
                 className="form-input mt-1 w-full p-2 outline-none"
-              />
-
-              </div>
-              <div id="projectDurationError" className='hidden font-semibold text-red-700'>Cannot be empty!</div>
-        
+              />              
+              
             </div>
+            <div id="projectDurationError" className='hidden font-semibold text-red-700'>Cannot be empty!</div>
+        
 
             <div className="my-6 border border-solid rounded-[5]">
               <label className="px-2 block">Risks Involved in the project :</label>
@@ -516,7 +554,7 @@ const InvestmentForm = () => {
               />
             </div>  
 
-            <div className="my-6 border border-solid rounded-[5]">
+            <div id="yourInvestment" className="my-4 border border-solid rounded-[5]">
               <label className="px-2 block">If we start executing the project, what amount would you invest in it? :</label>
               <input
                 type="number"
@@ -527,6 +565,8 @@ const InvestmentForm = () => {
                 className="form-input mt-1 w-full p-2 outline-none"
               />
             </div> 
+            <div id="yourInvestmentError" className='hidden font-semibold text-red-700'>Cannot be empty!</div>
+
 
             <div className="my-6 border border-solid rounded-[5]">
               <label className="px-2 block">Any Other Comments :</label>

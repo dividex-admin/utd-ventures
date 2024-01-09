@@ -31,11 +31,11 @@ const Footer = () => {
      <div className='md:ml-8 mt-14 md:my-4 w-1/3'>
      <h3 className='text-xl font-bold'>Useful Links</h3>
       <ul className='text-sm font-manrope pt-4'>
-        <li className='my-2'><a href='/'>Home</a></li>
-        <li className='my-2'><a href='/about'>About us</a></li>
-        <li className='my-2'><a href='/products'>Products</a></li>
-        <li className='my-2'><a href='/terms-of-usage'>Terms of Usage</a></li>
-        <li className='my-2'><a href='privacy-policy'>Privacy Policy</a></li>
+        <li className='my-2'><a href='https://dividex.in/'>Home</a></li>
+        <li className='my-2'><a href='https://dividex.in/about'>About us</a></li>
+        <li className='my-2'><a href='https://dividex.in/products'>Products</a></li>
+        <li className='my-2'><a href='https://dividex.in/terms-of-usage'>Terms of Usage</a></li>
+        <li className='my-2'><a href='https://dividex.in/privacy-policy'>Privacy Policy</a></li>
       </ul>
 
      </div>
