@@ -5,6 +5,7 @@ import Home from './Pages/Home/Home';
 import ThankYou from './Pages/ThankYou/ThankYou';
 import Header from './Components/Header/Header';
 import { createRoot } from 'react-dom/client';
+import Companies from './Pages/Companies/Companies';
 
 const AppComponent = () => {
   const location = useLocation();
@@ -32,7 +33,12 @@ const appRouter = createBrowserRouter([
       {
         path: '/thank-you',
         element: <ThankYou />,
+      },
+      {
+        path: '/companies',
+        element: <Companies />,
       }
+    
     
     ],
   },

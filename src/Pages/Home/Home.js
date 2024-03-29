@@ -1,11 +1,12 @@
 import React from 'react';
 import Footer from '../../Components/Footer/Footer';
-import InvestmentForm from '../InvestmentForm/InvestmentForm';
+import UTDVentures from '../UTDVentures/UTDVentures';
 
 const Home = () => {
   return (
     <>
-    <InvestmentForm/>
+
+    <UTDVentures/>
       
       <Footer />
     </>

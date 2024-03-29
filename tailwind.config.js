@@ -6,8 +6,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        themecolor: '#025464',
-        secondarythemecolor: '#3E9B8A',
+        themecolor: '#44597E',
+        secondarythemecolor: '#1C7293',
         footercolor: '#C7D8DC',
       },
     },
@@ -15,6 +15,10 @@ module.exports = {
       'Inter': ['Inter', 'sans-serif'],
       'lexend': ['"Lexend Deca"', 'sans-serif'],
       'manrope': ['Manrope', 'sans-serif'],
+      'maven-pro': ['Maven Pro', 'sans-serif'],
+      'overpass': ['Overpass', 'sans-serif'],
+      'overlock': ['Overlock', 'sans-serif']
+
     },
   },
   plugins: [],
