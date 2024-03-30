@@ -60,7 +60,7 @@ const Header = () => {
               )}
             </div>
           </div>
-          <div className="flex mb-6 items-center justify-around">
+          <div className="flex mb-6 items-center justify-evenly">
             <Link to="/" className={`text-lg font-medium font-overpass ${activeItem === "Home" ? 'text-secondarythemecolor font-black text-3xl underline' : 'text-gray-600 text-thin hover:text-blue-500'} py-2`} onClick={() => handleItemClick("Home")}>Home</Link>
             <Link to="/companies" className={`text-lg font-medium font-overpass ${activeItem === "Companies" ? 'text-secondarythemecolor font-black text-3xl underline' : 'text-gray-600 text-thin hover:text-blue-500'} py-2`} onClick={() => handleItemClick("Companies")}>Companies</Link>
           </div>

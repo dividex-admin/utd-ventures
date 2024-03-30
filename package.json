@@ -1,15 +1,15 @@
 {
-  "name": "dividex-project-new",
+  "name": "the_UTD_Ventures",
   "version": "1.0.0",
-  "description": "Investment Platform",
+  "description": "Venture fund",
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html",
     "test": "jest"
   },
   "keywords": [
-    "investment",
-    "platform"
+    "venture",
+    "fund"
   ],
   "author": "Sandeep Kumar Singh",
   "license": "ISC",
