@@ -200,7 +200,7 @@ const finalSubmit = (e) => {
         <img className="mx-auto w-full"  src={blueSection}/>
       </div> */}
 
-      <div className='my-10 flex-col font-overpass py-10 md:py-36  text-white' style={{ backgroundImage: `url(${blueSection})` }}>
+      <div className='my-10 flex-col font-overpass py-10 md:py-36 bg-cover text-white' style={{ backgroundImage: `url(${blueSection})` }}>
         <h2 className='text-center text-3xl mb-10'>About Us</h2>
         <div className='mx-auto w-10/12 md:w-8/12 text-center text-lg md:text-2xl'>
           We have invested in sectors such as EV, Space Tech, and Mobility, fuelling the future of innovation. Our ambition doesn't stop here we're on the hunt to diversify our portfolio by partnering with trailblazing new-age companies. If your venture is reshaping industries and pushing boundaries, let's drive the next wave of progress together.
