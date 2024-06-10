@@ -9,129 +9,10 @@ import schneider from '../../assets/images/schneider.webp';
 import goldman from '../../assets/images/goldman.webp';
 import shopse from '../../assets/images/shopse.webp';
 import blueSection from '../../assets/images/blue_section.png';
-import whyUs from '../../assets/images/why_us.png';
-// import whyWorkWithUs from '../../assets/images/why_work_with_us.png';
-import strokePath from '../../assets/images/path.svg';
-import blob from '../../assets/images/blob_small.svg';
-
 
 import WhyWorkWithUs from '../../Components/WhyWorkWithUs/WhyWorkWithUs';
 
-
-
-
-
-
 const UTDVentures = () => {
-  const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    phoneNumber: '',
-    currentOccupation: '',
-    designation: '',
-    companyName: '',
-    currentIndustry: '',
-    industry: '',
-    location: '',
-    projectType: '',
-    investmentRequired: '',
-    annualIncome: '',
-    expectedPayoutMaturity: '',
-    otherExpectedIncome: '',
-    toatalAnnualizedReturn: '',
-    expertiseRequired: '',
-    projectDuration: '',
-    riskInvolved: '',
-    blocker: '',
-    yourInvestment: '',
-    comment: ''
-  });
-
-  const [currentStep, setCurrentStep] = useState(1);
-
-  const steps = ['Step 1', 'Step 2', 'Step 3'];
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
-
-  const nextStep = () => {
-    let flag=true;
-    flag= validateInput(currentStep);
-    
-    if(flag){
-      setCurrentStep((prevStep) => prevStep + 1);
-    }
-  };
-
-  const prevStep = () => {
-    setCurrentStep((prevStep) => prevStep - 1);
-  };
-
-
-  const validateInput = (step) => {
-    const formFields = {...formData};
-    const formErrors = {};
-    let formIsValid = true;
-
-    
-    return formIsValid;
-   };
-
-//   const handleSubmit = (e) => {
-//     e.preventDefault();
-//     // Perform form submission logic here
-//     console.log('Form submitted:', formData);
-
-//   };
-
-
-const finalSubmit = (e) => {
-  e.preventDefault();
-  let flag=true;
-  flag= validateInput(currentStep);
-  
-  if(flag){
-   handleSubmit(e);
-  }
-  else{
-  }
-};
-
-  const handleSubmit = async (e) => {
-        // Perform form submission logic here
-        e.preventDefault();
-    
-    try {
-      const response = await fetch(CREATE_LEAD, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-  
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-      } else {
-        // navigate('/thank-you');
-                // history.push('/thank-you'); 
-                window.location.replace('/thank-you');
-      }
-
-    } catch (error) {
-      // Handle errors here
-      console.error('Error submitting form data:', error);
-    }
-  };
-  
 
   return (
     <>
@@ -191,11 +72,6 @@ const finalSubmit = (e) => {
       </div>
 </div>
 
-
-      {/* <div className='my-10'>
-        <img className="mx-auto w-full"  src={blueSection}/>
-      </div> */}
-
       <div className='my-10 flex-col font-overpass py-10 md:py-36 bg-cover text-white' style={{ backgroundImage: `url(${blueSection})` }}>
         <h2 className='text-center text-3xl mb-10'>About Us</h2>
         <div className='mx-auto w-10/12 md:w-8/12 text-center text-lg md:text-2xl'>
@@ -203,15 +79,10 @@ const finalSubmit = (e) => {
         </div>
       </div>
 
-
-
-     
       <div className='w-full'>
     <WhyWorkWithUs />
     </div>
 
-
-      
     </>
   );
 };

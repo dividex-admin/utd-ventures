@@ -4,21 +4,11 @@ import React, { useState } from 'react';
 import Footer from '../../Components/Footer/Footer';
 
 import statiqLogo from '../../assets/images/statiq_logo.webp';
-// import blueSmartLogo from '../../assets/images/blueSmart_logo.png';
 import blueSmartLogo from '../../assets/images/BluSmart_logo_2023.jpeg';
-
-
 import agnikulLogo from '../../assets/images/agnikul_logo.webp';
-// import megaCabsLogo from '../../assets/images/megaCabs_logo.png';
-
-
-import megaCabsLogo from '../../assets/images/megaCabs_logo2.svg';
-
+import megaCabsLogo from '../../assets/images/megaCabs_logo.png';
 
 import CompanyCard from '../../Components/CompanyCard';
-
-
-
 
 const Companies = () => {
   return (
