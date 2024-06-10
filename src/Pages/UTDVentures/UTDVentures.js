@@ -10,16 +10,12 @@ import goldman from '../../assets/images/goldman.webp';
 import shopse from '../../assets/images/shopse.webp';
 import blueSection from '../../assets/images/blue_section.png';
 import whyUs from '../../assets/images/why_us.png';
-import whyWorkWithUs from '../../assets/images/why_work_with_us.png';
+// import whyWorkWithUs from '../../assets/images/why_work_with_us.png';
 import strokePath from '../../assets/images/path.svg';
 import blob from '../../assets/images/blob_small.svg';
-import strategies from '../../assets/images/four_dots.svg';
-import wallet from '../../assets/images/wallet_check.svg';
-import chart from '../../assets/images/chart.svg';
-import judge from '../../assets/images/judge.svg';
 
 
-import DynamicCard from '../../Components/DynamicCardComponent';
+import WhyWorkWithUs from '../../Components/WhyWorkWithUs/WhyWorkWithUs';
 
 
 
@@ -209,46 +205,11 @@ const finalSubmit = (e) => {
 
 
 
-      <div className='mt-24 md:mb-20'>
-        <div className='text-center font-overpass font-black text-2xl md:text-5xl text-themecolor md:mb-4'> Why Work With Us</div>
-        <img className="mx-auto mb-16 w-4/12 md:w-3/12" src={strokePath}/>
-
-        <img className="hidden md:block mx-auto" src={whyWorkWithUs}/>
-
-        </div>
-
-
-      <div className='md:hidden'>
-  
-
-      <DynamicCard
-        imageSrc={strategies}
-        title="Tailored Investment Strategies"
-        content="We believe in a bespoke approach to investment, understanding that each startup has unique needs and visions. 
-        Our flexible funding options are designed to match your startup's specific stage and goals."
-      />
-      <DynamicCard
-        imageSrc={wallet}
-        title="Strategic Support Beyond Capital"
-        content="Our involvement goes beyond the check.
-         We provide hands-on support, mentorship, and access to a vast network of industry leaders, potential partners, and future customers."
-      />
-
-      <DynamicCard
-        imageSrc={chart}
-        title="Commitment to Growth  Innovation"
-        content="At UTD Ventures, we’re committed to the long-term success of our portfolio companies. We work closely with our founders, fostering an environment of continuous innovation and growth." 
-        />
-
-      <DynamicCard
-        imageSrc={judge}
-        title="Global Reach"
-        content="Our advisory panel consists of industry veterans with decades of global experience across 10+ countries."
-        />
-      
-
-      {/* Add more instances of DynamicComponent with different props */}
+     
+      <div className='w-full'>
+    <WhyWorkWithUs />
     </div>
+
 
       
     </>
